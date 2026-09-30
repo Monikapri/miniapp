@@ -1,0 +1,98 @@
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    font-family: "Oswald", sans-serif;
+    /* background-color: blueviolet; */
+}
+
+body{
+    background-color: blueviolet; 
+}
+
+section{
+    padding-top: 30px;
+}
+
+
+.mycontainer{
+    background-color: white;
+    display: flex;
+    align-items: center;
+    padding: 10px 10px;
+    margin: auto;
+    border-radius: 20px;
+    justify-content: center;
+    width: 70%;
+    gap: 150px;
+    height: 80vh;
+
+}
+
+form{
+    display: grid;
+}
+
+input,textarea{
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px;
+    background-color: lightgray !important;
+    color: rgb(0, 0, 0);
+    border: none;
+    width: 220px;
+
+}
+
+textarea{
+    height: 100px;
+}
+
+.mycformleft, label,input,textarea,form,button{
+    background-color: white;
+}
+
+.mycformright{
+    background-color: white;
+}
+
+.info{
+    background-color: white;
+    font-weight: 600;
+}   
+
+button{
+    font-size: 18px;
+    color: #fff;
+    padding: 10px 20px;
+    background-color: rgb(132, 4, 252);
+    border-color: rgb(132, 4, 252);
+    border: none;
+    border-radius: 20px;
+    width: 100%;
+}
+
+#nameErr,#emailErr,#msgErr {
+    color: red;
+    background-color: white;
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+@media (min-width:320px) and (max-width:480px) {
+
+    .mycontainer{
+        display: block;
+        height: 90vh;
+        align-content: center;
+    }
+
+    .mycformleft{
+        margin-bottom: 40px;
+    }
+
+    input,textarea{
+        margin: 5px;
+    }
+    
+}

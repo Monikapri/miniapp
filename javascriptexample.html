@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modern Dynamic Webpage</title>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --text: #1f2937;
+            --bg: #f9fafb;
+            --card-bg: #ffffff;
+            --border: #e5e7eb;
+            --danger: #dc2626;
+            --success: #16a34a;
+        }
+
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+
+        header {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: #4b5563;
+            padding: 10px 20px;
+            box-shadow: inset 4px -4px 5px 14px #39445491;
+        }
+
+
+        header .logo {
+            padding: 10px;
+            color: var(--primary);
+            text-transform: capitalize;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+
+        .logo a {
+            text-decoration: none;
+            color: var(--card-bg);
+        }
+
+
+        .logo span {
+            color: var(--success);
+            font-size: 23px;
+            font-style: italic;
+        }
+
+
+        .logo .mobileicon {
+            font-size: 28px;
+            padding: 10px;
+            display: none;
+        }
+
+
+        .menus ul li {
+            list-style-type: none;
+            display: inline-block;
+            padding: 10px;
+        }
+
+
+        .menus a {
+            text-decoration: none;
+            font-size: 18px;
+            color: var(--bg);
+        }
+
+
+        .menus ul li:hover a {
+            color: var(--success);
+            font-weight: 500;
+        }
+
+
+
+
+        /* Layout & Components */
+        .section-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+
+        /* Hero */
+        #hero {
+            min-height: 75vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(135deg, #1e293b, #0f172a);
+            color: #ffffff;
+            padding: 40px 20px;
+        }
+
+
+        #hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 16px;
+        }
+
+
+        #hero p {
+            font-size: 1.2rem;
+            color: #94a3b8;
+            max-width: 600px;
+            margin-bottom: 24px;
+        }
+
+
+        .btn {
+            padding: 12px 28px;
+            border-radius: 6px;
+            border: none;
+            background: var(--primary);
+            color: #fff;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+
+        .btn:hover {
+            background: var(--primary-dark);
+        }
+
+
+        /* Slider */
+        .slider-wrapper {
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+            background: #000;
+            height: 380px;
+        }
+
+
+        .slider-track {
+            display: flex;
+            height: 100%;
+            transition: transform 0.4s ease-in-out;
+        }
+
+
+        .slide-card {
+            min-width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+            background: #ffffff;
+            text-align: center;
+            box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.05);
+        }
+
+
+        .slide-card h3 {
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin-bottom: 12px;
+        }
+
+
+        .slide-card p {
+            max-width: 500px;
+            color: #4b5563;
+        }
+
+
+        .slider-controls {
+            display: flex;
+            justify-content: space-between;
+            position: absolute;
+            width: 100%;
+            top: 50%;
+            transform: translateY(-50%);
+            padding: 0 16px;
+        }
+
+
+        .slider-arrow {
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1.2rem;
+        }
+
+
+        .slider-dots {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 16px;
+        }
+
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #cbd5e1;
+            cursor: pointer;
+        }
+
+
+        .dot.active {
+            background: var(--primary);
+        }
+
+
+        /* FAQ Accordion */
+        .faq-item {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            margin-bottom: 12px;
+            overflow: hidden;
+        }
+
+
+        .faq-question {
+            padding: 18px 20px;
+            display: flex;
+            justify-content: space-between;
+            cursor: pointer;
+            font-weight: 600;
+            user-select: none;
+        }
+
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            padding: 0 20px;
+            color: #4b5563;
+        }
+
+
+        .faq-item.active .faq-answer {
+            padding: 0 20px 18px 20px;
+        }
+
+
+        .faq-icon {
+            transition: transform 0.3s ease;
+        }
+
+
+        .faq-item.active .faq-icon {
+            transform: rotate(45deg);
+        }
+
+
+        /* Form */
+        .form-box {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            padding: 32px;
+            border-radius: 8px;
+            max-width: 550px;
+            margin: 0 auto;
+        }
+
+
+        .form-group {
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+
+
+        .form-group label {
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+
+
+        .form-group input,
+        .form-group textarea {
+            padding: 10px 14px;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            outline: none;
+            font-size: 0.95rem;
+        }
+
+
+        .form-group.error input,
+        .form-group.error textarea {
+            border-color: var(--danger);
+        }
+
+
+        .form-group.success input,
+        .form-group.success textarea {
+            border-color: var(--success);
+        }
+
+
+        .error-msg {
+            color: var(--danger);
+            font-size: 0.8rem;
+            margin-top: 4px;
+            display: none;
+        }
+
+
+        .form-group.error .error-msg {
+            display: block;
+        }
+
+
+        /* Footer */
+        footer {
+            background: #0f172a;
+            color: #94a3b8;
+            padding: 40px 20px;
+            text-align: center;
+            border-top: 1px solid #1e293b;
+        }
+
+
+        .geo-box {
+            margin-top: 16px;
+            display: inline-block;
+            padding: 8px 16px;
+            background: #1e293b;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="#">
+                <h3>logo <span>'s</span></h3>
+            </a>
+            <div class="mobileicon">
+                ☰
+            </div>
+        </div>
+        <div class="menus">
+            <ul id="menus">
+                <li><a href="#"> Home</a></li>
+                <li><a href="#"> About</a></li>
+                <li><a href="#"> Service</a></li>
+                <li><a href="#"> Contact</a></li>
+            </ul>
+        </div>
+    </header>
+    <section id="hero">
+        <h1 id="hero-title"></h1>
+        <p id="hero-desc"></p>
+        <button class="btn" id="hero-btn">Explore Features</button>
+    </section>
+
+
+    <section class="section-container" id="slider-section">
+        <h2 class="section-title">Core Highlights</h2>
+        <div class="slider-wrapper">
+            <div class="slider-track" id="slider-track"></div>
+            <div class="slider-controls">
+                <button class="slider-arrow" id="prev-btn">&#10094;</button>
+                <button class="slider-arrow" id="next-btn">&#10095;</button>
+            </div>
+        </div>
+        <div class="slider-dots" id="slider-dots"></div>
+    </section>
+
+
+    <section class="section-container" id="faq-section">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <div id="faq-list"></div>
+    </section>
+
+
+    <section class="section-container" id="contact-section">
+        <h2 class="section-title">Get in Touch</h2>
+        <div class="form-box">
+            <form id="contact-form" novalidate>
+                <div class="form-group" id="name-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" placeholder="John Doe" />
+                    <span class="error-msg">Name must be at least 3 characters long.</span>
+                </div>
+
+
+                <div class="form-group" id="email-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" placeholder="john@example.com" />
+                    <span class="error-msg">Enter a valid email address.</span>
+                </div>
+
+
+                <div class="form-group" id="phone-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" placeholder="10-digit number" />
+                    <span class="error-msg">Enter a valid 10-digit mobile number.</span>
+                </div>
+
+
+                <div class="form-group" id="message-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" rows="4" placeholder="How can we help?"></textarea>
+                    <span class="error-msg">Message must be at least 10 characters long.</span>
+                </div>
+
+
+                <button type="submit" class="btn" style="width: 100%;">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+
+    <footer>
+        <p>&copy; 2026 Core Vanilla Project. All rights reserved.</p>
+        <div class="geo-box" id="geo-display">Detecting location...</div>
+    </footer>
+
+
+    <script>
+
+
+        const menusItem = [
+            { mId: 1, menuName: "Home" },
+            { mId: 2, menuName: "About" },
+            { mId: 3, menuName: "Service" },
+            { mId: 4, menuName: "Contact" },
+        ];
+        menusItem.map((items) => {
+            let Items = ''
+            let listItem = document.getElementById("menus");
+            Items += `
+        <li ${items.mId}>  <a href="#" > ${items.menuName} </a> </li>
+    `;
+
+
+            listItem.innerHTML = items;
+
+
+        })
+        // -------------------------------------------------------------
+        // 1. HERO SECTION ENGINE
+        // -------------------------------------------------------------
+        const heroData = {
+            title: "Engineered With Pure Vanilla JavaScript",
+            desc: "Zero external dependencies, zero animation libraries. Dynamic rendering and full DOM control directly from script."
+        };
+
+
+        document.getElementById("hero-title").textContent = heroData.title;
+        document.getElementById("hero-desc").textContent = heroData.desc;
+        document.getElementById("hero-btn").addEventListener("click", () => {
+            document.getElementById("slider-section").scrollIntoView({ behavior: "smooth" });
+        });
+
+
+        // -------------------------------------------------------------
+        // 2. SLIDER CARD ENGINE
+        // -------------------------------------------------------------
+        const slides = [
+            { title: "Zero Dependencies", text: "Optimized performance by executing logic with direct browser APIs." },
+            { title: "Dynamic State UI", text: "Every card and accordion node is programmatically rendered." },
+            { title: "Robust Form Handling", text: "Real-time regex feedback before processing submission events." }
+        ];
+
+
+        const track = document.getElementById("slider-track");
+        const dotsContainer = document.getElementById("slider-dots");
+        let currentSlide = 0;
+        let autoSlideInterval;
+
+
+        slides.forEach((item, index) => {
+            const slide = document.createElement("div");
+            slide.className = "slide-card";
+            slide.innerHTML = `<h3>${item.title}</h3><p>${item.text}</p>`;
+            track.appendChild(slide);
+
+
+            const dot = document.createElement("span");
+            dot.className = `dot ${index === 0 ? "active" : ""}`;
+            dot.addEventListener("click", () => goToSlide(index));
+            dotsContainer.appendChild(dot);
+        });
+
+
+        function updateSlider() {
+            track.style.transform = `translateX(-${currentSlide * 100}%)`;
+            document.querySelectorAll(".dot").forEach((d, idx) => {
+                d.classList.toggle("active", idx === currentSlide);
+            });
+        }
+
+
+        function goToSlide(idx) {
+            currentSlide = idx;
+            updateSlider();
+            resetSliderTimer();
+        }
+
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            updateSlider();
+        }
+
+
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            updateSlider();
+        }
+
+
+        function resetSliderTimer() {
+            clearInterval(autoSlideInterval);
+            autoSlideInterval = setInterval(nextSlide, 4500);
+        }
+
+
+        document.getElementById("next-btn").addEventListener("click", () => { nextSlide(); resetSliderTimer(); });
+        document.getElementById("prev-btn").addEventListener("click", () => { prevSlide(); resetSliderTimer(); });
+        resetSliderTimer();
+
+
+        // -------------------------------------------------------------
+        // 3. FAQ ACCORDION ENGINE
+        // -------------------------------------------------------------
+        const faqs = [
+            { q: "Are any frameworks or CDNs imported?", a: "No. All components, styling hooks, and behaviors run entirely on standard browser APIs." },
+            { q: "How does the form validation run?", a: "Custom regular expressions run on both real-time input events and submit verification." },
+            { q: "How does the footer detect location?", a: "It requests user access via `navigator.geolocation` and computes coordinates without any map SDKs." }
+        ];
+
+
+        const faqList = document.getElementById("faq-list");
+
+
+        faqs.forEach((faq) => {
+            const item = document.createElement("div");
+            item.className = "faq-item";
+            item.innerHTML = `
+        <div class="faq-question">
+          <span>${faq.q}</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          <p>${faq.a}</p>
+        </div>
+      `;
+
+
+            const questionHead = item.querySelector(".faq-question");
+            const answerBody = item.querySelector(".faq-answer");
+
+
+            questionHead.addEventListener("click", () => {
+                const isActive = item.classList.contains("active");
+
+
+                // Close all open FAQs
+                document.querySelectorAll(".faq-item").forEach((el) => {
+                    el.classList.remove("active");
+                    el.querySelector(".faq-answer").style.maxHeight = null;
+                });
+
+
+                // Toggle clicked FAQ
+                if (!isActive) {
+                    item.classList.add("active");
+                    answerBody.style.maxHeight = answerBody.scrollHeight + "px";
+                }
+            });
+
+
+            faqList.appendChild(item);
+        });
+
+
+        // -------------------------------------------------------------
+        // 4. FORM VALIDATION ENGINE
+        // -------------------------------------------------------------
+        const form = document.getElementById("contact-form");
+        const inputs = {
+            name: document.getElementById("name"),
+            email: document.getElementById("email"),
+            phone: document.getElementById("phone"),
+            message: document.getElementById("message")
+        };
+
+
+        const rules = {
+            name: (val) => val.trim().length >= 3,
+            email: (val) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val.trim()),
+            phone: (val) => /^[0-9]{10}$/.test(val.trim()),
+            message: (val) => val.trim().length >= 10
+        };
+
+
+        function validateField(name) {
+            const field = inputs[name];
+            const parent = field.parentElement;
+            const isValid = rules[name](field.value);
+
+
+            if (!isValid) {
+                parent.classList.add("error");
+                parent.classList.remove("success");
+            } else {
+                parent.classList.remove("error");
+                parent.classList.add("success");
+            }
+            return isValid;
+        }
+
+
+        // Attach real-time validation listeners
+        Object.keys(inputs).forEach((key) => {
+            inputs[key].addEventListener("input", () => validateField(key));
+            inputs[key].addEventListener("blur", () => validateField(key));
+        });
+
+
+        form.addEventListener("submit", (e) => {
+            e.preventDefault();
+            let formIsValid = true;
+
+
+            Object.keys(inputs).forEach((key) => {
+                const isValid = validateField(key);
+                if (!isValid) formIsValid = false;
+            });
+
+
+            if (formIsValid) {
+                alert("Form submitted successfully!");
+                form.reset();
+                Object.keys(inputs).forEach((key) => {
+                    inputs[key].parentElement.classList.remove("success", "error");
+                });
+            }
+        });
+
+
+        // -------------------------------------------------------------
+        // 5. GEOLOCATION FOOTER ENGINE
+        // -------------------------------------------------------------
+        const geoDisplay = document.getElementById("geo-display");
+
+
+        function fetchLocation() {
+            if (!("geolocation" in navigator)) {
+                geoDisplay.textContent = "Geolocation is not supported by your browser.";
+                return;
+            }
+
+
+            navigator.geolocation.getCurrentPosition(
+                (position) => {
+                    const lat = position.coords.latitude.toFixed(4);
+                    const lon = position.coords.longitude.toFixed(4);
+                    geoDisplay.textContent = `User Coordinates: Lat ${lat}°, Lon ${lon}°`;
+                },
+                (error) => {
+                    switch (error.code) {
+                        case error.PERMISSION_DENIED:
+                            geoDisplay.textContent = "Location access denied by user.";
+                            break;
+                        case error.POSITION_UNAVAILABLE:
+                            geoDisplay.textContent = "Location information is unavailable.";
+                            break;
+                        case error.TIMEOUT:
+                            geoDisplay.textContent = "Request to obtain location timed out.";
+                            break;
+                        default:
+                            geoDisplay.textContent = "Unable to retrieve location.";
+                    }
+                },
+                { enableHighAccuracy: true, timeout: 8000 }
+            );
+        }
+
+
+        window.addEventListener("DOMContentLoaded", fetchLocation);
+    </script>
+</body>
+
+
+</html>

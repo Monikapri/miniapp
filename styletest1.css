@@ -1,0 +1,188 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #000;
+}
+
+.container {
+    min-height: 100vh;
+    background: #57899a;
+    padding: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-box {
+    width: 630px;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Header */
+
+.form-header {
+    background: #f1f1f1;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+    padding: 18px;
+}
+
+.form-header h1 {
+    font-size: 28px;
+    color: #666;
+}
+
+/* Form */
+
+form {
+    padding: 25px 38px 0;
+}
+
+.row {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+.field {
+    flex: 1;
+}
+
+.full {
+    width: 100%;
+}
+
+.field label {
+    display: block;
+    color: #19a98f;
+    font-weight: bold;
+    margin-bottom: 3px;
+    font-size: 16px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+select,
+textarea {
+    width: 100%;
+    border: 1px solid #d5d5d5;
+    border-radius: 4px;
+    padding: 8px;
+    font-size: 15px;
+}
+
+input::placeholder {
+    color: #ccc;
+}
+
+select {
+    height: 34px;
+}
+
+textarea {
+    height: 84px;
+    resize: vertical;
+}
+
+/* Radio & Checkbox */
+
+.options {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #666;
+    white-space: nowrap;
+}
+
+.options label {
+    color: #666;
+    font-weight: normal;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
+/* Income */
+
+.income {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.income input[type="range"] {
+    flex: 1;
+}
+
+.income span {
+    background: #19b394;
+    color: white;
+    padding: 7px 8px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+/* Footer */
+
+.form-footer {
+    margin: 25px -38px 0;
+    padding: 10px 38px;
+    background: #f1f1f1;
+    border-top: 1px solid #ddd;
+    text-align: right;
+}
+
+button {
+    background: #12b894;
+    color: white;
+    border: none;
+    padding: 10px 22px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0e9277;
+}
+
+/* Mobile */
+
+@media (max-width: 650px) {
+
+    .container {
+        padding: 10px;
+    }
+
+    .form-box {
+        width: 100%;
+    }
+
+    form {
+        padding: 20px;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    .form-footer {
+        margin-left: -20px;
+        margin-right: -20px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .options {
+        flex-wrap: wrap;
+    }
+}

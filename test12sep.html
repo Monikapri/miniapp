@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    font-family: "Oswald", sans-serif;
+}
+   header {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+
+header ul li {
+    list-style-type: none;
+    padding: 10px;
+    display: inline-block;
+}
+header ul li:hover {
+    background-color: rgb(181, 211, 178);
+    border-radius: 10px;
+    transition: all .5s ease-out;
+}
+
+@media (min-width:320px) and (max-width:480px) {
+    header {
+        background-color: rgb(12, 12, 12);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    header ul li {
+        display: block;
+    }
+
+}
+        </style>
+</head>
+<body>  
+    <header>
+        <div class="mnus">
+            <ul>
+                <li>Home </li>
+                <li>About</li>
+                <li>Services</li>
+                <li>Contact</li>
+            </ul>
+        </div>
+    </header>
+
+
+    <!-- <table>
+        <thead style="border: 2px solid black;margin: 2px;padding: 2px;">
+            <th>ID</th>
+            <th>Name</th>
+            <th>UserName</th>
+        </thead>
+        <tbody id="usertable">
+            
+        </tbody>
+    </table> -->
+
+    <!-- <form id="lform" name="lform">
+        <label for="uname">UserName</label>
+        <input type="text" name="uname" id="uname">
+        <label for="pass">Password</label>
+        <input type="password" name="pass" id="pass">
+        <button type="submit">Submit</button>
+    </form> -->
+
+    <!-- <form id="mform" name="mform">
+         <label for="name">Name</label>
+         <input type="text" name="name" id="name" placeholder="Enter your Name">
+         <label for="name">Email</label>
+         <input type="text" name="email" id="email" placeholder="Enter your Email">
+         <label for="dept">Department</label>
+         <select name="dept" id="dept">
+            <option value="Developer">Developer</option>
+            <option value="Tester">Tester</option>
+            <option value="Devops">Devops</option>
+            <option value="Network">Network</option>
+         </select>
+         <label for="gen">Gender</label>
+         <input type="radio" name="male" id="male" >Male
+         <input type="radio" name="male" id="male" >Female
+         <button type="submit">Submit</button>
+
+    </form> -->
+
+<script>
+
+//     const myform = document.getElementById("lform");
+//     myform.addEventListener("submit",function(event)
+//     {
+//         event.preventDefault();
+        
+//         const usrname = document.getElementById("uname").value.trim();
+//         const pass = document.getElementById("pass").value.trim();
+//         let isvalid= true;
+
+//         if(usrname==="" && pass==="")
+//             {   
+//                 alert("Username and Password required");
+//                 isvalid=false;
+//             }
+//         else if(pass.length<6)
+//             {   
+//                 alert("Password should be atleast 6 character");
+//                 isvalid=false;
+//             }
+        
+//         if (isvalid) {
+//             alert("Form submitted successfully!");
+//             myform.reset();
+//         }
+
+
+//     });
+    
+//     setInterval(() => {
+//     fetch("https://jsonplaceholder.typicode.com/users")
+//         .then((res) => res.json())
+//         .then(
+//             (data) => {
+             
+//                 let rows="";
+//                 data.forEach((user) => {
+//                     rows += `
+//                         <tr>
+//                         <td>${user.id}</td>
+//                         <td>${user.name}</td>
+//                         <td>${user.username}</td>    
+//                         </tr>
+//                     `;
+                    
+//                 });
+
+//                 document.getElementById("usertable").innerHTML = rows;
+//             }
+//         )
+//         .catch((err) => console.log(err));
+// }, 6000);
+
+    
+
+
+</script>
+    
+</body>
+</html>

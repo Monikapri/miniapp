@@ -1,0 +1,120 @@
+
+.acform{
+    padding: 10%;
+    margin: 0%;
+    box-sizing: border-box;
+    font-family: "Oswald", sans-serif;
+    background-color: rgb(27, 27, 100);
+    
+}
+.cform {
+    background-color: rgb(253, 253, 253);
+    border-radius: 2px;
+    width: 600px;
+    display: block;
+    margin: auto;
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    padding-bottom: 50px;
+}
+
+.heading{
+    background-color: rgb(186, 185, 185);
+    /* margin: auto; */
+    display: block;
+    padding: 10px 10px;
+    align-items: center;
+    border-bottom: 1px solid black;
+    justify-content: center;
+    text-align: center;
+    border-radius: 10px;
+}
+
+input{
+    /* padding: 10px 10px;
+    margin: 10px 10px; */
+}
+
+label{
+    padding: 10px 10px;
+    font-size: 13px;
+    color: #0e916c;
+    font-weight: 600;
+    align-content: center;
+
+}
+
+.spantext{
+    font-size: 13px;
+    color: #141515;
+    align-content: center;
+}
+
+
+
+textarea{
+    padding: 10px 10px;
+    width: 80%;
+}
+
+button {
+    background-color: #30d5a5;
+    font-weight: 500;
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    font-size: 15px;
+    border-radius: 10px;
+    width:30%
+}
+
+.btn{
+    padding: 10px 10px;
+    justify-content: center;
+    display: flex;
+}
+
+
+.cname{
+    display: flex;
+    flex-direction: row;
+    padding: 10px 10px;
+}
+
+.cpassdiv{
+    display: flex;
+    flex-direction: row;
+    padding: 10px 10px;
+}
+
+.email{
+     display: flex;
+    flex-direction: row;
+    padding: 10px 10px;
+}
+
+.email input{
+    width: 80%;
+}
+
+
+.genhob{
+    display: flex;
+    flex-direction: row;
+    padding: 10px 10px;
+    justify-content: space-between;
+}
+
+.incdiv{
+    display: flex;
+    flex-direction: row;
+    padding: 10px 10px;
+}
+
+.picagediv{
+    display: flex;
+    flex-direction: row;
+    padding: 10px 10px;
+}

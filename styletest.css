@@ -1,0 +1,123 @@
+header{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: rgb(244, 241, 241);
+}
+
+.logo{
+    font-size: 15px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: gray;
+    margin-right: auto; 
+}
+
+.menuicon img{
+    width: 25px;
+    height: 25px;
+}
+
+.herocontent{
+    background-color: #292c33;
+    height: 1000px;
+}
+
+.flexbox{
+    display: block;
+    gap:20px;
+    background-color: #292c33;
+    justify-content: center;
+    padding: 15px;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 20px;
+
+}
+
+
+.icon img{
+    width: 20px;
+    height: 20px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    margin: auto;
+}
+
+
+.flexchild1{
+    background-color: white;
+    color: black;
+    padding: 10px;
+    margin: 10px 0;
+    width: 198px;
+    height: 150px;
+    align-items: center;
+}
+
+.contactform h1{
+    text-align: center;
+    padding: 10px 10px;
+    padding-top: 59px;
+}
+
+.contactform
+{
+    background-color: #89d8e3;
+    width: 400px;
+    height: 400px;
+    /* margin: auto; */
+    margin: -73px 31px;
+    
+}
+
+.cformdv form{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 22px;
+}
+
+form input,textarea{
+    border: none;
+}
+
+form button{
+    width: 150px;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    height: 50px;
+    background-color: #89d8e3;
+    border-color: blue;
+}
+
+@media (min-width:320px) and (max-width:480px){
+
+    .flexbox{
+    display: block;
+    gap:20px;
+    background-color: #292c33;
+    justify-content: center;
+    padding: 30px;
+    text-align: center;
+
+}
+
+.contactform{
+        width: 305px;
+        height: 323px;
+    }
+
+.herocontent{
+    background-color: #292c33;
+    height: 1200px;
+}
+
+
+}

@@ -1,0 +1,169 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="mycss.css">
+        <title>Test Weekoff</title>
+    </head>
+    <body>
+        <section>
+            <div class="mycontainer">
+            <div class="mycformleft">
+                <img src="assets/images2.png" alt="">
+            </div>
+            <div class="mycformright">
+                <p class="info">Get In Touch</p>
+                <form action="" class="myform" id="myform">
+                    <input type="text" name="cname" id="cname" placeholder="Name" >
+                    <div id="nameErr"></div>
+                    <input type="email" name="cemail" id="cemail" placeholder="Email" >
+                    <div id="emailErr"></div>
+                    <textarea name="msg" id="msg" placeholder="Message.." ></textarea>
+                    <div id="msgErr"></div>
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+            </div>
+        </section>
+        
+        <script>
+
+    const myform = document.getElementById("myform");
+
+    myform.addEventListener("submit", function(event) {
+
+        event.preventDefault();
+
+        const cname = document.getElementById("cname").value.trim();
+        const cemail = document.getElementById("cemail").value.trim();
+        const msg = document.getElementById("msg").value.trim();
+
+        const nameErr = document.getElementById("nameErr");
+        const emailErr = document.getElementById("emailErr");
+        const msgErr = document.getElementById("msgErr");
+
+        let isvalid = true;
+        nameErr.textContent = "";
+        emailErr.textContent = "";
+        msgErr.textContent = "";
+
+        if (cname === "") {
+            nameErr.textContent = "Name is required";
+            isvalid = false;
+        }
+
+        
+        const emailPattern = /[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]/
+        if (!cemail) {
+            emailErr.textContent = "Please Fill the email Data"
+            isValid = false
+        }
+        else if (!emailPattern.test(cemail)) {
+            emailErr.textContent = "Please Fill the correct email Data"
+            isValid = false
+        }
+        else {
+            emailErr.textContent = ""
+            isValid = true
+        }
+
+
+        if (msg === "") {
+            msgErr.textContent = "Message is required";
+            isvalid = false;
+        }
+
+        if (isvalid) {
+            alert("Form submitted successfully!");
+            myform.reset();
+        }
+
+    });
+
+    </script>
+
+        
+
+        <script>
+        // Perform all array operation : 
+        // let myContent = ["HTML", "CSS", "JavaScript", "React"];  basic Operations of array 
+        // let numbers = [45, 12, 78, 23, 9, 56, 34, 90, 12, 67]; Major operations like map,sort,filter,find,foreach,reduce,indexOf,include 
+
+            let myContent = ["HTML", "CSS", "JavaScript", "React"];
+            let numbers = [45, 12, 78, 23, 9, 56, 34, 90, 12, 67];
+
+            myContent.push("JS");
+            console.log(myContent);console.log("PUSH");
+
+            myContent.pop();
+            console.log(myContent);console.log("POP");
+
+            myContent.pop();
+            console.log(myContent);console.log("POP");
+
+            myContent.shift();
+            console.log(myContent);console.log("SHIFT");
+
+            myContent.unshift("Test");
+            console.log(myContent);console.log("UNSHIFT");
+
+            console.log(myContent.concat(numbers));console.log("CONCAT");
+
+            console.log(myContent.slice(0,1));console.log("SLICE");
+            console.log(myContent.slice(0,2));console.log("SLICE");
+            console.log(myContent.slice(0,3));console.log("SLICE");
+            console.log(numbers.slice(5,6));console.log("SLICE");
+
+            let myContentnew = ["HTML", "CSS", "JavaScript", "React"];
+            console.log(myContentnew);
+            myContentnew.splice(1,1);
+            console.log(myContentnew);
+            myContentnew.splice(1,2);
+            console.log(myContentnew);
+            myContentnew.splice(1,0,"ADD TEST","TTT");
+            console.log(myContentnew);
+            console.log("SPLICE");
+
+
+            numbers.map((val,key) => {
+            console.log(val,key)
+            })
+            console.log("MAP");
+
+            let sortNumber = numbers.sort((a,b)=>a-b);
+            console.log(sortNumber);    
+            let sortNumber1 = numbers.sort((a,b)=>b-a);
+            console.log(sortNumber1);    
+            console.log("SORT");
+            
+            let filterNumber = numbers.filter(num =>num > 50);
+            console.log(filterNumber);  
+            console.log("filter");
+
+            //find,foreach,reduce,indexOf,include 
+
+            let findNumber = numbers.find(num =>num > 30);
+            console.log(filterNumber);  
+            console.log("find");
+
+            numbers.forEach((num, index) => {
+            console.log(index, num);
+            });
+            console.log("foreach");
+
+            let result = numbers.reduce((total, num) => {
+                return total + num;
+            }, 0);
+            console.log(result);
+            console.log("reduce");
+
+            console.log(numbers.indexOf(12))
+            console.log("indexOf");
+
+            console.log(numbers.includes(45));
+            console.log(numbers.includes(100));
+            console.log("includes")
+        </script>
+    </body>
+    </html>

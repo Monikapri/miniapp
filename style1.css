@@ -1,0 +1,587 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    font-family: "Oswald", sans-serif;
+}
+
+
+/* header partt */
+
+
+.logo {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+}
+
+
+.logo img {
+    width: 30%;
+    padding: 10px;
+}
+
+
+.logo i {
+    font-size: 36px;
+    padding: 10px;
+    display: none;
+}
+
+
+.menus ul li {
+    list-style-type: none;
+    padding: 10px;
+    display: inline-block;
+}
+
+
+.menus ul li:hover {
+    background-color: #ea0061;
+    transition: all .7s ease-in-out;
+}
+
+
+.menus ul li a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #fff;
+}
+
+
+.menus ul li:hover a {
+    color: #fff;
+}
+
+
+.supermenu {
+    position: relative;
+}
+
+
+.supermenu:hover .submenus {
+    display: block;
+}
+
+
+.submenus {
+    position: absolute;
+    top: 48px;
+    left: 0;
+    display: none;
+}
+
+
+.submenus li {
+    display: block !important;
+    width: 200px;
+    margin: 5px 0;
+    background-color: rgb(27, 37, 37);
+}
+
+
+.menus .contactbtn {
+    background-color: #ea0061;
+    padding: 15px 20px;
+    border-radius: 10px;
+}
+
+
+.contactbtn a {
+    color: #fff;
+}
+
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #000;
+}
+
+
+/* hero  */
+.herosec {
+    background-image: url('assets/img1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+    padding: 70px 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.herocontent {
+    background-color: #ffffff7b;
+    padding: 30px 30px;
+    margin: 10px 0;
+    text-align: center;
+    width: 600px;
+}
+
+
+.herocontent h1 {
+    padding: 10px;
+    font-size: 46px;
+}
+
+
+.herocontent p {
+    padding: 10px;
+    font-size: 14px;
+}
+
+
+.btns button {
+    border: none;
+    border-radius: 10px;
+}
+
+
+.btns button:nth-child(1) {
+    background-color: #f96aa6;
+    font-size: 18px;
+    color: #fff;
+    padding: 10px 30px;
+}
+
+
+.btns button:nth-child(2) {
+    background-color: #7a0636;
+    font-size: 18px;
+    color: #fff;
+    padding: 10px 30px;
+}
+
+
+/* lerning part */
+.learningpart {
+    padding: 70px 60px;
+    background-color: #f7e7edd4;
+}
+
+
+.headingpart {
+    padding: 20px 20px;
+}
+
+
+.headingpart h1 {
+    font-size: 36px;
+    padding: 10px;
+}
+
+
+.headingpart h1 span {
+    color: #ea0061;
+    font-style: italic;
+}
+
+
+.headingpart p {
+    padding: 10px;
+}
+
+
+.headingpart .line {
+    border: 3px solid #ea0061;
+    width: 200px;
+    margin: 10px 0;
+    border-radius: 10px;
+}
+
+
+.learnbox {
+    background-color: #f5c4d9;
+    padding: 20px 30px;
+    margin: 10px 10px;
+    border: 1px solid #e988b0;
+    color: #040000;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    width: 600px;
+}
+
+
+.learnicon {
+    padding: 5px 9px;
+    margin: 10px;
+    font-size: 32px;
+}
+
+
+.learncontent h3 {
+    padding: 5px;
+    color: #7a0636;
+}
+
+
+.learncontent p {
+    padding: 10px;
+}
+
+
+.learningboxes {
+    padding: 10px 10px;
+    margin: 10px 0;
+    /* display: grid; */
+    /* grid-template-columns: 600px 600px;
+    gap: 20px; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.learneffect {
+    background: linear-gradient(90deg, rgba(131, 58, 180, 0.57) 0%, rgba(253, 29, 29, 0.71) 50%, rgba(252, 176, 69, 0.81) 100%);
+    color: #fff;
+    border-radius: 10px;
+    padding: 48px 10px;
+}
+
+
+/* form part */
+.formsection {
+    padding: 70px 60px;
+    background-color: #f0f0ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.formleft {
+    /* background-color: #cdcde9; */
+    padding: 20px 30px;
+    margin: 10px 10px;
+    color: #490522;
+    width: 600px;
+}
+
+
+.formleft h1 {
+    padding: 10px;
+    font-size: 37px;
+    font-style: italic;
+}
+
+
+.formleft p {
+    padding: 10px;
+    font-size: 14px;
+}
+
+
+.btns {
+    padding: 20px 10px;
+}
+
+
+.formright {
+    padding: 20px 30px;
+    margin: 10px 10px;
+    color: #490522;
+    width: 600px;
+}
+
+
+.formright h3 {
+    text-align: center;
+    font-size: 38px;
+    padding: 5px;
+}
+
+
+.formright p {
+    padding: 5px;
+    text-align: center;
+}
+
+
+.formright .inputs {
+    padding: 10px 5px;
+    margin: 6px 0;
+}
+
+
+.formright .inputs input,
+.formright .inputs textarea {
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #f96aa6;
+    padding: 10px;
+    outline: none;
+    color: #780535;
+}
+
+
+.formright input::placeholder {
+    color: #e988b0;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+
+/* team */
+.teamsec {
+    padding: 70px 60px;
+    padding-bottom: 150px;
+}
+
+
+.teamember img {
+    padding: 17px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: #ff0970bd;
+    box-shadow: -1px 6px 2px 3px #2e30307d;
+}
+
+
+.teamember {
+    background-color: #ea0061;
+    text-align: center;
+    padding: 15px;
+    margin: 10px 0;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 1px 4px 5px #0000008a;
+}
+
+
+.team {
+    position: relative;
+    /* background-color: #e988b127; */
+    padding: 20px 10px;
+    margin: 10px 10px;
+}
+
+
+.teaminfo {
+    background-color: #f0f0ff;
+    padding: 25px 10px;
+    margin: 5px;
+    text-align: center;
+    border-radius: 10px;
+    width: 270px;
+    position: absolute;
+    bottom: -65px;
+    left: -5px;
+}
+
+
+.allteams {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+footer {
+    background-color: #780535;
+    color: #fff;
+    padding: 70px 60px;
+    display: flex;
+    justify-content: space-around;
+    align-items: start;
+}
+
+
+.footerbox {
+    /* background-color: #ea00626d; */
+    padding: 20px 30px;
+    margin: 10px 0;
+    width: 300px;
+}
+
+
+.footerbox h3 {
+    padding: 10px;
+    font-size: 18px;
+}
+
+
+.footerbox p {
+    padding: 10px;
+}
+
+
+.footerbox ul li {
+    list-style-type: none;
+    padding: 10px;
+}
+
+
+.footerbox ul li a {
+    text-decoration: none;
+    color: #f0f0ff;
+}
+
+
+.footerbox ul li a span {
+    padding: 0 10px;
+    color: #fff;
+}
+
+
+.footerbox ul li a:hover {
+    color: #e988b0;
+}
+
+
+
+
+
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .logo {
+        width: 100%;
+        justify-content: space-around;
+    }
+
+
+    .logo img {
+        width: 100px;
+    }
+
+
+    .logo i {
+        display: block;
+        color: #fff;
+    }
+
+
+    .menus {
+        background-color: #f96aa6;
+        padding: 20px;
+        position: absolute;
+        width: 100%;
+        left: -99%;
+    }
+
+
+    .menus ul li {
+        display: block;
+        background-color: #e988b0;
+        margin: 5px 0;
+    }
+
+
+    header {
+        display: block;
+        position: relative;
+    }
+
+
+    .herosec {
+        padding: 70px 0;
+    }
+
+
+    .herocontent {
+        padding: 10px 10px;
+        width: inherit;
+    }
+
+
+    .herocontent h1 {
+        font-size: 27px;
+    }
+
+
+    .learningpart {
+        padding: 70px 0;
+    }
+
+
+    .headingpart {
+        padding: 30px 10px;
+    }
+
+
+    .headingpart h1 {
+        font-size: 32px;
+    }
+
+
+    .learnbox {
+        display: block;
+        width: inherit;
+        padding: 10px;
+        text-align: center;
+        background-color: #ea0061;
+        color: #fff;
+    }
+
+
+    .learnbox h3 {
+        color: #f5c4d9;
+    }
+
+
+    .learningboxes {
+        display: block;
+    }
+
+
+    .formsection {
+        padding: 70px 0;
+        display: block;
+    }
+
+
+    .formleft {
+        width: inherit;
+    }
+
+
+    .btns button {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+
+    .formleft h1 {
+        font-size: 20px;
+    }
+
+
+    .formright {
+        width: inherit;
+    }
+
+
+    .teamsec {
+        padding: 70px 0;
+    }
+
+
+    .allteams {
+        display: block;
+    }
+
+
+    footer {
+        padding: 70px 0;
+        display: block;
+    }
+
+
+}

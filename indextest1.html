@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account</title>
+    <link rel="stylesheet" href="styletest1.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="form-box">
+
+            <div class="form-header">
+                <h1>Create Account</h1>
+            </div>
+
+            <form>
+
+                <!-- First Name / Last Name -->
+                <div class="row">
+                    <div class="field">
+                        <label>First name *</label>
+                        <input type="text" placeholder="enter your first name">
+                    </div>
+
+                    <div class="field">
+                        <label>Last name</label>
+                        <input type="text" placeholder="enter your last name">
+                    </div>
+                </div>
+
+                <!-- Email -->
+                <div class="field full">
+                    <label>Email*</label>
+                    <input type="email" placeholder="enter your email">
+                </div>
+
+                <!-- Password -->
+                <div class="row">
+                    <div class="field">
+                        <label>Password *</label>
+                        <input type="password" placeholder="enter your password">
+                    </div>
+
+                    <div class="field">
+                        <label>Confirm Password *</label>
+                        <input type="password" placeholder="enter your password again">
+                    </div>
+                </div>
+
+                <!-- Gender / Hobbies -->
+                <div class="row">
+
+                    <div class="field">
+                        <label>Gender:</label>
+
+                        <div class="options">
+                            <label>
+                                <input type="radio" name="gender">
+                                Male
+                            </label>
+
+                            <label>
+                                <input type="radio" name="gender">
+                                Female
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label>Hobbies</label>
+
+                        <div class="options">
+                            <label>
+                                <input type="checkbox"> Music
+                            </label>
+
+                            <label>
+                                <input type="checkbox"> Sports
+                            </label>
+
+                            <label>
+                                <input type="checkbox"> Travel
+                            </label>
+
+                            <label>
+                                <input type="checkbox"> Movies
+                            </label>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Income -->
+                <div class="row">
+
+                    <div class="field">
+                        <label>Source of Income</label>
+
+                        <select>
+                            <option>Employed</option>
+                            <option>Business</option>
+                            <option>Student</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+
+                    <div class="field">
+                        <label>Income</label>
+
+                        <div class="income">
+                            <input type="range" min="0" max="100000" value="20000">
+                            <span>20K</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Profile / Age -->
+                <div class="row">
+
+                    <div class="field">
+                        <label>Upload Profile Picture</label>
+                        <input type="file">
+                    </div>
+
+                    <div class="field">
+                        <label>Age</label>
+                        <input type="number" value="18">
+                    </div>
+
+                </div>
+
+                <!-- Bio -->
+                <div class="field full">
+                    <label>Bio</label>
+                    <textarea></textarea>
+                </div>
+
+                <!-- Button -->
+                <div class="form-footer">
+                    <button type="submit">Create</button>
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

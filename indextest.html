@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="testcss.css">
+    <title>Form</title>
+</head>
+
+<body>
+    <header></header>
+    <section class="acform">
+        <div class="cform">
+            <div class="heading">Create Account</div>
+
+            <div class="cname"><label for="fname">First Name*</label>
+                <input type="text" name="fname" id="fname" placeholder="Enter your Name"/>
+
+                <label for="lname">Last Name*</label>
+                <input type="text" name="lname" id="lname" placeholder="Enter your Name"/>
+            </div>
+
+            <div class="email">
+            <label for="email">Email*</label>
+            <input type="email" name="email" id="email" placeholder="Enter your email"/>
+            </div>
+
+            <div class="cpassdiv">
+                <label for="pass">Password*</label>
+                <input type="password" name="pass" id="pass" placeholder="Enter your Password"/>
+
+                <label for="cpass">Confirm Password*</label>
+                <input type="text" name="cpass" id="cpass" placeholder="Enter your Confirm Password"/>
+            </div>
+
+            <div class="genhob">
+            <label for="gender">Gender</label>
+            <input type="radio" name="male" id="male"/><span class="spantext">Male</span>
+            <input type="radio" name="female" id="female"/><span class="spantext">Female</span>
+
+            <label for="hobbies">Hobbies</label>
+            <input type="checkbox" name="music" id="music"/><span class="spantext">Music</span>
+            <input type="checkbox" name="travel" id="travel"/><span class="spantext">Travel</span>
+            <input type="checkbox" name="Sports" id="Sports"/><span class="spantext">Sports</span>
+            <input type="checkbox" name="Movies" id="Movies"/><span class="spantext">Movies</span>
+            </div>
+            <div class="incdiv">
+            <label for="fname">Source of Income</label>
+            <input type="number" name="income" id="income"/>
+
+            <label for="cincome">Income</label>
+            <input type="range" name="cincome" id="cincome" min="0" max="50" value="20K"/> <span class="spantext">20K</span>
+            </div>
+
+            <div class="picagediv">
+            <label for="img">Upload Profile Picture</label>
+            <input type="file" name="img" id="img"/>
+
+            <label for="age">Age</label>
+            <input type="text" name="age" id="age"/>
+            </div>
+
+            <div class="biodiv">
+            <label for="bio">BIO</label>
+            <textarea name="bio" id="bio"></textarea>
+            </div>
+            
+
+            <div class="btn"><button type="submit">Create</button></div>
+
+
+        </div>
+    </section>
+</body>
+
+</html>
